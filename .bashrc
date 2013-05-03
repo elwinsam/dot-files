@@ -12,7 +12,7 @@ if [ $(id -u) -eq 0 ];
 then # you are root, set red colour prompt
     export PS1="\\[$(tput setaf 1)\\]\\u@\\h:\\w #\\[$(tput sgr0)\\] "
 else # normal
-    export PS1="\e[0;32m\\u@\\h: \e[0;33m\\w\e[0 \e[0;36m\$(bash_git_branch)\n\[\e[0;37m\]$ "
+    export PS1="\e[0;32m\\u@\\h: \e[0;33m\\w\e \e[0;36m\$(bash_git_branch)\n\[\e[0;37m\]$ "
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
